@@ -1,7 +1,7 @@
 Raqcoin integration/staging tree
 ================================
 
-www.Raqmint.org
+www.Raqcoin.info
 
 Copyright (c) 2025 The Raqcoin developers
 
