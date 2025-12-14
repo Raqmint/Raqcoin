@@ -21,8 +21,8 @@ src/test_raqcoin
 src/test_*
 
 # 编译中间文件
-src/obj/
-src/obj-test/
+# src/obj/
+# src/obj-test/
 src/*.o
 src/*.a
 .qmake.stash
@@ -30,6 +30,11 @@ raqcoin-qt-p.app
 
 # 编译生成的头文件
 src/obj/build.h
+
+# Make dependency files
+src/obj/*.P
+src/obj-test/*.P
+src/pqcrypto/*.P
 
 # ============================================
 # 运行时数据 (可以清理)
@@ -112,7 +117,7 @@ src/qt/moc_*.cpp
 src/qt/ui_*.h
 src/qt/qrc_*.cpp
 src/qt/*.moc
-Makefile
+# Makefile
 Makefile.Debug
 Makefile.Release
 object_script.*.Debug
