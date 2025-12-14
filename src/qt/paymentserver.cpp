@@ -64,7 +64,7 @@ bool PaymentServer::ipcSendCommandLine()
     const QStringList& args = qApp->arguments();
     for (int i = 1; i < args.size(); i++)
     {
-        if (!args[i].startsWith(RAQCOIN_IPC_PREFIX, Qt::CaseInsensitive))
+        if (!args[i].startsWith(ABCMINT_IPC_PREFIX, Qt::CaseInsensitive))
             continue;
         savedPaymentRequests.append(args[i]);
     }

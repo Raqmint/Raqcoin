@@ -159,8 +159,8 @@ contains(USE_GPU, -) {
     INCLUDEPATH +=/usr/local/cuda/include
     LIBS += $$PWD/src/obj/libgpumining.a
     #INCLUDEPATH += /usr/local/cuda/lib64
-    #LIBS += /usr/lib/x86_64-linux-gnu/libcudart_static.a
-    LIBS += /usr/local/cuda/lib64/libcudart_static.a
+    LIBS += /usr/lib/x86_64-linux-gnu/libcudart_static.a
+    #LIBS += /usr/local/cuda/lib64/libcudart_static.a
     #LIBS += -L /usr/local/cuda/lib64 -lcudart
 
     unix {
@@ -439,7 +439,7 @@ CODECFORTR = UTF-8
 
 # for lrelease/lupdate
 # also add new translations to src/qt/raqcoin.qrc under translations/
-TRANSLATIONS = $$files(src/qt/locale/abcmint_*.ts)
+TRANSLATIONS = $$files(src/qt/locale/raqcoin_*.ts)
 #QMAKE_LRELEASE = /usr/lib/x86_64-linux-gnu/qt5/bin/lrelease
 isEmpty(QMAKE_LRELEASE) {
     win32:QMAKE_LRELEASE = $$[QT_INSTALL_BINS]\\lrelease.exe

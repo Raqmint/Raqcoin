@@ -34,9 +34,9 @@ QString RaqcoinUnits::name(int unit)
 {
     switch(unit)
     {
-    case ABC: return QString("ABC(RAQ)");
-    case mABC: return QString("mABC(mRAQ)");
-    case uABC: return QString::fromUtf8("μABC(μRAQ)");
+    case ABC: return QString("RAQ(ABC)");
+    case mABC: return QString("mRAQ(mABC)");
+    case uABC: return QString::fromUtf8("μRAQ(μABC)");
 
     default: return QString("???");
     }

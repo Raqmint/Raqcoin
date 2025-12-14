@@ -69,8 +69,8 @@ RaqcoinGUI::RaqcoinGUI(QWidget *parent) :
     restoreWindowGeometry();
     setWindowTitle(tr("Raqcoin") + " - " + tr("Wallet"));
 #ifndef Q_OS_MAC
-    QApplication::setWindowIcon(QIcon(":icons/abcmint"));
-    setWindowIcon(QIcon(":icons/abcmint"));
+    QApplication::setWindowIcon(QIcon(":icons/raqcoin"));
+    setWindowIcon(QIcon(":icons/raqcoin"));
 #else
     setUnifiedTitleAndToolBarOnMac(true);
     QApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
@@ -211,7 +211,7 @@ void RaqcoinGUI::createActions()
     quitAction->setStatusTip(tr("Quit application"));
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
-    aboutAction = new QAction(QIcon(":/icons/abcmint"), tr("&About Abcmint"), this);
+    aboutAction = new QAction(QIcon(":/icons/raqcoin"), tr("&About Raqcoin"), this);
     aboutAction->setStatusTip(tr("Show information about Raqcoin"));
     aboutAction->setMenuRole(QAction::AboutRole);
     aboutQtAction = new QAction(QIcon(":/trolltech/qmessagebox/images/qtlogo-64.png"), tr("About &Qt"), this);
@@ -220,7 +220,7 @@ void RaqcoinGUI::createActions()
     optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
     optionsAction->setStatusTip(tr("Modify configuration options for Raqcoin"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
-    toggleHideAction = new QAction(QIcon(":/icons/abcmint"), tr("&Show / Hide"), this);
+    toggleHideAction = new QAction(QIcon(":/icons/raqcoin"), tr("&Show / Hide"), this);
     toggleHideAction->setStatusTip(tr("Show or hide the main Window"));
 
     encryptWalletAction = new QAction(QIcon(":/icons/lock_closed"), tr("&Encrypt Wallet..."), this);
@@ -302,10 +302,10 @@ void RaqcoinGUI::setClientModel(ClientModel *clientModel)
         {
             setWindowTitle(windowTitle() + QString(" ") + tr("[testnet]"));
 #ifndef Q_OS_MAC
-            QApplication::setWindowIcon(QIcon(":icons/abcmint_testnet"));
-            setWindowIcon(QIcon(":icons/abcmint_testnet"));
+            QApplication::setWindowIcon(QIcon(":icons/raqcoin_testnet"));
+            setWindowIcon(QIcon(":icons/raqcoin_testnet"));
 #else
-            MacDockIconHandler::instance()->setIcon(QIcon(":icons/abcmint_testnet"));
+            MacDockIconHandler::instance()->setIcon(QIcon(":icons/raqcoin_testnet"));
 #endif
             if(trayIcon)
             {

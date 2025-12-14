@@ -13,6 +13,10 @@
 #include <QDateTime>
 #include <QTimer>
 
+// Bring Boost placeholders into scope for boost::bind with newer Boost versions
+#include <boost/bind/placeholders.hpp>
+using namespace boost::placeholders;
+
 static const int64 nClientStartupTime = GetTime();
 
 ClientModel::ClientModel(OptionsModel *optionsModel, QObject *parent) :
